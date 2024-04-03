@@ -1,0 +1,126 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for better box sizing */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-color: aqua; */
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 7%;
+    min-height: 45vh;
+    width: 60vh;
+    box-shadow: 0px 8px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+form {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+input, select, button {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+
+form input {
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    height: 2rem;
+    padding-left: 0.6rem;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.select-container img {
+    max-width: 2rem;
+}
+
+.select-container {
+    display: flex;
+    width: 6rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+}
+
+.dropdown i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.select-container select {
+    font-size: 1rem;
+    width: auto;
+}
+
+.msg {
+    margin: 2rem 0 2rem 0;
+}
+
+form button {
+    height: 3rem;
+    background-color: brown;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90vw; /* Adjust width for smaller screens */
+        min-height: auto; /* Adjust height for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    form input, .select-container, form button {
+        height: 3rem; /* Adjust height for better touch targets on mobile */
+    }
+
+    .dropdown i {
+        font-size: 1rem; /* Adjust icon size for smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    /* Styles for desktop screens */
+    .container {
+        max-width: 60vh; /* Adjust max-width for larger screens */
+    }
+}
+.invalid-amount-popup {
+    background-color: white;
+    width: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
